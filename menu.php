@@ -11,7 +11,16 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><p class="navbar-text">Welcome </p></li>
-        <li><a href="logout.php">Logout</a></li>
+        <?php require_once 'models/User.php';
+        if($_GET['logout']){
+          User::logout();
+        }
+        ?>
+        <li>
+          <form action="#" method="get">
+            <button class="btn btn-primary" value='logout' type='submit' name='logout'>Logout</button>
+          </form>
+        </li>
     </ul>
   </div>
 </nav>

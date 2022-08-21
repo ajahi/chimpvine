@@ -13,6 +13,9 @@
     require_once '../../menu.php';
     require_once '../../models/Role.php';
     require_once '../../models/Database.php';
+    if($_POST){
+      Role::updateRole($_POST['role_name'],$_GET['id']);
+    }
     ?>   
         <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -20,15 +23,15 @@
     
   </div>
 </div>
-
-<form action='' method='POST'>
+<?php $role=Role::getSingleRole($_GET['id']);?>
+<form action='#' method='POST'>
   <div class="form-group">
     
     <label for="exampleInputEmail1">Role name</label>
-  </div>
+    <input type="text" class="form-control" id="name" name="role_name" value='<?php print_r($role['role_name']);?>'> 
+     </div>
   
   
-  <input type="submit" class="btn btn-primary" value="Update " name="update">
-</form>
+     <input value="Update" type="submit" name="add" class="btn btn-primary"></form>
 
 <?php require_once '../components/footer.php'?>  

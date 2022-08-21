@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `created_on`) VALUES
-(1,'amit','b109f3bbbc244eb82441917ed06d618b9008dd09b3befd1b5e07394c706a8bb980b1d7785e5976ec049b46df5f1326af5a2ea6d103fd07c95385ffab0cacbc86','amit@company.com','2022-10-25 19:44:31');
+(1,'amit','$2y$10$PbCvXvC3bp.AvUpRzOoSF.E01SoXwvn/qI6e.ue8WgAY.CnZqnEIS','amit@company.com','2022-10-25 19:44:31');
 
 -- --------------------------------------------------------
 

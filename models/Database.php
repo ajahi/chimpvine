@@ -13,9 +13,9 @@ class Database
     public function __construct()
     {
         $this->hostname = '127.0.0.1';
-        $this->username = 'root';
-        $this->password = '';
-        $this->database = 'role_permission_based_access_control';
+        $this->username = 'ajahi';//"root"
+        $this->password = 'Password1@';//""
+        $this->database = 'role_permission_based_access_control';//name of the table
 
         $this->conn = new PDO("mysql:host={$this->hostname};dbname={$this->database}", "{$this->username}", "{$this->password}");
         if ($this->conn->errorCode()) {
