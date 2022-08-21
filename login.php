@@ -53,10 +53,9 @@
                 <button type="submit" class="btn btn-primary btn-block mb-4">
                   Login
                 </button>
-                  <p>
-                    Email:amit@company.com<br>
-                    pass:password
-                  </p>
+<p>EMail:amit@comapny.com <br>
+pass:password
+</p>
                 <!-- Register buttons -->
                
               </form>
