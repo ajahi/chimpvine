@@ -33,7 +33,8 @@ as per the wish required.
 # 4. How to Install and Run the Project?
 These instructions are said in the presuposition of the user has MYSQL 8.0.30,PHP 8.1.8. installed already.
 1.Create table called "Role_permission_access_control" in your local network.
-2.Run SQL present in the folder called "db", tables.sql should be followed by sample-data.sql.
+2.Run SQL file present in the folder called "db". tables.sql should be followed by sample-data.sql.
+3.Make sure creadentials of db is valid in 'models/database.php';
 
 
 

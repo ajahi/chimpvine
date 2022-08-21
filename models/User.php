@@ -34,21 +34,7 @@ class User{
         
         
     }
-    public function add($username,$password,$email){
-
-        $has_password=password_hash($password,);
-        $sql2 = "INSERT INTO users (username, password, email) VALUES (:username, SHA2(:password, 512), :email)";
-            $sth2 = $db->conn->prepare($sql2);
-            $sth2->execute(array(":username" => $username, ":password" => $password, ":email" => $email));
-            return $sth->rowCount();
-    }
     
-    public static function countUser(){
-        $db = new Database();
-        $sql='SELECT COUNT(*) FROM users;';
-        $sth = $db->conn->prepare($sql);
-        return $sth->execute();
-    }
     public static function assignRole($user_id,$role_id){
         $db = new Database();
         $sql="INSERT INTO `user_role`(`user_id`, `role_id`) VALUES (:user_id,:role_id)";
