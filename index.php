@@ -19,12 +19,13 @@ if (session_status() === PHP_SESSION_NONE) {
 
 }
 
-  $u=isset($_SESSION['user']->username);
-    if(!$u){
-      header('Location:login.php');
-    }
+$u=isset($_SESSION['user']->username);
 
-    require_once 'menu.php';
+if(!$u){   
+    header('Location:login.php');
+  }
+
+  require_once 'menu.php';
 
     $user= $_SESSION['user'];
     ?>

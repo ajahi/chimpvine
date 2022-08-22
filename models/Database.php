@@ -13,8 +13,8 @@ class Database
     public function __construct()
     {
         $this->hostname = '127.0.0.1';
-        $this->username = "ajahi";
-        $this->password = "Password1@";
+        $this->username = "root";
+        $this->password = "";
         $this->database = 'role22';//name of the table
 
         $this->conn = new PDO("mysql:host={$this->hostname};dbname={$this->database}", "{$this->username}", "{$this->password}");
