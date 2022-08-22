@@ -27,13 +27,13 @@ if(!$u){
 
   require_once 'menu.php';
 
-    $user= $_SESSION['user'];
+    $USER= $_SESSION['user'];
     ?>
   <div class="list-group container">
       <a href="#" class="list-group-item list-group-item-action active">
       Roles
       <?php
-      if($user->checkUserPerm('add_role')){
+      if($USER->checkUserPerm('add_role')){
       ?>
       <a href="views/roles/rolecreate.php" class='btn btn-danger btn-sm'>Add Roles</a>
       <?php
@@ -49,15 +49,15 @@ if(!$u){
       }
       $roles = Role::getAllRoles();
 
-      if(!$user->checkUserPerm('view_role')){
+      if(!$USER->checkUserPerm('view_role')){
         ?>
-        <a href="#" class="list-group-item list-group-item-action"><?php print_r($_SESSION['user']->username); ?> ,You are not permitted to View Roles. to view roles change permission to 'view_role' in index.php.</a>
+        <a href="#" class="list-group-item list-group-item-action"><?php print_r($USER->username); ?> ,You are not permitted to View Roles. to view roles change permission to 'view_role' in index.php.</a>
       <?php
       }else{
         foreach ($roles as $role) {
         
           ?>
-          <a href="#" class="list-group-item list-group-item-action"><?php echo($role['role_name']); ?></a>
+          <a href="#" class="list-group-item list-group-item-action"><?php print_r($role['role_name']); ?></a>
           <span class="float-right">
           
             

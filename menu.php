@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
    
 }
 
-$user=$_SESSION['user'];
+$USER=$_SESSION['user'];
 
 if($_GET['logout']){
   User::logout();
@@ -27,7 +27,7 @@ if($_GET['logout']){
       </li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text"><?php print_r(ucfirst($user->username)) ;?></p></li>
+        <li><p class="navbar-text"><?php print_r(ucfirst($USER->username)) ;?></p></li>
         <li>
           <form action="#" method="get">
             <button class="btn btn-primary" value='logout' type='submit' name='logout'>Logout</button>

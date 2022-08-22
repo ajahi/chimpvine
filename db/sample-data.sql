@@ -100,8 +100,8 @@ INSERT INTO `role_perm` (`role_id`, `perm_id`) VALUES
 
 (4, 1),
 -- Guest has view_role
-(4,6);
-
+(1,6);
+-- Super_admin has add_role
 
 
 -- --------------------------------------------------------
