@@ -49,8 +49,8 @@ These instructions are said in the presuposition of the user has MYSQL 8.0.30,PH
 -> Login using credentials given.<br>
 -> 'Index.php' will only appear if your credentials is correct otherwise it will redirect to 'login.php'<br>
 -> amit@company.com has permission of super_admin who can view roles but cannot view permissions.<br>
-
--> In index page Role, Permission List is given with provision for edit and deleting Roles.
--> Logout will log you out.<br>
+->to change permssion we must change values in table "perm_role" . <br>
+-> In index page Role, Permission List is given with provision for edit and deleting Roles.<br>
+-> Logout will log you out.
 
 
