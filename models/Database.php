@@ -15,7 +15,7 @@ class Database
         $this->hostname = '127.0.0.1';
         $this->username = "ajahi";
         $this->password = "Password1@";
-        $this->database = 'role_permission_based_access_control';//name of the table
+        $this->database = 'role22';//name of the table
 
         $this->conn = new PDO("mysql:host={$this->hostname};dbname={$this->database}", "{$this->username}", "{$this->password}");
         if ($this->conn->errorCode()) {

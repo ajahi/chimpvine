@@ -40,7 +40,8 @@ INSERT INTO `permissions` (`perm_id`, `perm_desc`) VALUES
 (2, 'add_permission'),
 (3, 'update_permission'),
 (4, 'delete_permission'),
-(5, 'view_permission');
+(5, 'view_permission'),
+(6,'add_role');
 
 -- --------------------------------------------------------
 
@@ -85,12 +86,22 @@ INSERT INTO `roles` (`role_id`, `role_name`) VALUES
 
 INSERT INTO `role_perm` (`role_id`, `perm_id`) VALUES
 (1, 1),
+-- Super_admin has view_role
 (1, 2),
+-- Super_admin has add_permission
 (1, 3),
+-- Super_admin has update_permission
+
 (1, 4),
-(1, 5),
+-- Super_admin has delete_permission
+
 (4, 5),
-(4, 1);
+-- Super_admin has update_permission
+
+(4, 1),
+-- Guest has view_role
+(4,6);
+
 
 
 -- --------------------------------------------------------

@@ -1,3 +1,20 @@
+<?php
+
+require_once 'models/User.php';
+
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+   
+}
+
+$user=$_SESSION['user'];
+
+if($_GET['logout']){
+  User::logout();
+}
+?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,12 +27,7 @@
       </li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-        <li><p class="navbar-text">Welcome </p></li>
-        <?php require_once 'models/User.php';
-        if($_GET['logout']){
-          User::logout();
-        }
-        ?>
+        <li><p class="navbar-text"><?php print_r(ucfirst($user->username)) ;?></p></li>
         <li>
           <form action="#" method="get">
             <button class="btn btn-primary" value='logout' type='submit' name='logout'>Logout</button>
